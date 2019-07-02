@@ -7,7 +7,7 @@ JMeter helper scripts and other useful samples.
 - Make
 
 ### Plugins
-1. Install the [JMeter Plugins Manager]()https://jmeter-plugins.org/wiki/PluginsManager/)
+1. Install the [JMeter Plugins Manager](https://jmeter-plugins.org/wiki/PluginsManager/)
 2. Using the plugin manager, install `Command line graph plotting tool` and `Synthesis Report`
 
 ## Makefile
