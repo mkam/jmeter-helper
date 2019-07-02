@@ -27,8 +27,8 @@ report:
 	$(JMETER) -g $(NAME).jtl -o $(NAME)
 
 aggregate-report:
-	sh $JMETER_HOME/libexec/bin/JMeterPluginsCMD.sh --plugin-type AggregateReport
-	--generate-csv $(OUTPUT).csv --input-jtl $(INPUT).jtl
+	sh $(JMETER_HOME)/libexec/bin/JMeterPluginsCMD.sh --plugin-type AggregateReport \
+		--generate-csv $(OUTPUT) --input-jtl $(INPUT)
 
 help:
 	@echo 'Options:'
