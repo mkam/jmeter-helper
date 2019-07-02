@@ -1,8 +1,9 @@
 ## Helper Scripts
 
 ### Compare Aggregate Results
-Takes two CSV files generated from the Aggregate Report plugin and compares the averages
-of each results. 
+Takes two CSV files generated from the Aggregate Report plugin 
+(see Makefile `aggregate-report` option) and compares the averages
+of each request. 
 
 #### Examples:
 Outputs to `comparison_results.txt` by default. Optional third parameter specifies the name of the output file.

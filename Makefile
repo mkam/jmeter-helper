@@ -26,10 +26,14 @@ test:
 report:
 	$(JMETER) -g $(NAME).jtl -o $(NAME)
 
+aggregate-report:
+	sh $JMETER_HOME/libexec/bin/JMeterPluginsCMD.sh --plugin-type AggregateReport
+	--generate-csv $(OUTPUT).csv --input-jtl $(INPUT).jtl
+
 help:
 	@echo 'Options:'
 	@echo ' test:	Runs JMeter test and names results files and HTML report based on inputs and timestamp.'
-	@echo '	SCRIPT: Path to JMeter JMX test file'
+	@echo '	SCRIPT: Path to JMeter JMX test file.'
 	@echo '	DURTION: Duration to run test in seconds, passed to script as a JMeter property.'
 	@echo '	RAMP_UP: Ramp up time in seconds, passed to script as a JMeter property.'
 	@echo '	THREADS: Number of concurrent users, passed to script as a JMeter property.'
@@ -37,3 +41,7 @@ help:
 	@echo ''
 	@echo ' report: Creates JMeter HTML report from JTL file.'
 	@echo '	NAME: Name of JTL file, minus extension. Also used to name the output directory.'
+	@echo ''
+	@echo ' aggregate-report: Creates JMeter CSV aggregate report from JTL file.'
+	@echo '	INPUT: Name of JTL input file.'
+	@echo '	OUTPUT: Name of CSV output file.'

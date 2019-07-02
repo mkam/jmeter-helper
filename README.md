@@ -1,6 +1,15 @@
 # jmeter-helper
 JMeter helper scripts and other useful samples.
 
+## Prerequisites
+- Java 8
+- JMeter 4.0
+- Make
+
+### Plugins
+1. Install the [JMeter Plugins Manager]()https://jmeter-plugins.org/wiki/PluginsManager/)
+2. Using the plugin manager, install `Command line graph plotting tool` and `Synthesis Report`
+
 ## Makefile
 Makefile for commands to run JMeter and generate reports.
 Example: 
@@ -16,3 +25,4 @@ jmeter \
 	-Jrampup=240 \
 	-Jduration=1200
 ```
+Also creates HTML reports and aggregate reports.
